@@ -108,7 +108,7 @@ def get_abi_tag():
 
 
 def _get_aix_pep425():
-    '''
+    """
     AIX filesets are identified by four decimal values aka VRMF.
     V (version) is the value returned by "uname -v"
     R (release) is the value returned by "uname -r"
@@ -122,7 +122,7 @@ def _get_aix_pep425():
     The program lslpp is used to gather these values.
     The pep425 platform tag for AIX becomes:
     AIX_V_R_M_YYWW_bitness
-    '''
+    """
 
     from subprocess import Popen, PIPE, DEVNULL
     p = Popen(["/usr/bin/lslpp", "-Lqc", "bos.mp64"],
